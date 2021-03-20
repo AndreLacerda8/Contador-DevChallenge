@@ -1,0 +1,43 @@
+main{
+    width: 700px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    color: var(--green);
+    padding: .8rem;
+    font-size: 2.5rem;
+    margin-bottom: .6rem;
+}
+
+label{
+    color: rgb(179, 179, 179);
+    display: block;
+    font-size: 1.4rem;
+}
+
+input, button{
+    width: 280px;
+    height: 50px;
+    border-radius: 1.3rem;
+    margin: .6rem;
+    border: none;
+}
+
+input{
+    background-color: var(--gray);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+
+button{
+    background-color: var(--green);
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
