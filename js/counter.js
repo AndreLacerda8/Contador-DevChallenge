@@ -5,13 +5,14 @@ let hours = document.querySelector('.hours > strong')
 let minutes = document.querySelector('.minutes > strong')
 let seconds = document.querySelector('.seconds > strong')
 
-
 const dataRegister = localStorage.getItem('storage')
+
 
 function formatDate(date){
     const dateSplitted = date.split('-')
     return `${dateSplitted[2].replace(/[^\d]+/g,'')}/${dateSplitted[1].replace(/[^\d]+/g,'')}/${dateSplitted[0].replace(/[^\d]+/g,'')}`
 }
+
 
 const finalDate = formatDate(dataRegister)
 compareDates(finalDate)
@@ -25,10 +26,10 @@ function compareDates(date){
         main.innerHTML = "<p>Escolha uma data que ainda não passou</p>"
     }
     else{
-                days.innerHTML = Math.floor(((((date - today) / 1000) / 60) / 60) / 24)
-                hours.innerHTML = Math.floor((((date - today) / 1000) / 60) / 60) % 24
-                minutes.innerHTML = Math.floor((((date - today) / 1000) / 60) % 60)
-                seconds.innerHTML = Math.floor((date - today) / 1000) % 60
+        days.innerHTML = Math.floor(((((date - today) / 1000) / 60) / 60) / 24)
+        hours.innerHTML = Math.floor((((date - today) / 1000) / 60) / 60) % 24
+        minutes.innerHTML = Math.floor(((date - today) / 1000) / 60) % 60
+        seconds.innerHTML = Math.floor((date - today) / 1000) % 60
     }
 
     setTimeout(() => {
